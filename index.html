@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameFlix - Classic Games Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="game">Game</span><span class="flix">Flix</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#arcade">Arcade</a></li>
+                <li><a href="#action">Action</a></li>
+                <li><a href="#puzzle">Puzzle</a></li>
+            </ul>
+        </nav>
+        <!-- User controls removed as unused feature -->
+    </header>
+
+    <main>
+        <!-- Featured Game Banner -->
+        <section class="featured-game">
+            <div class="featured-content">
+                <span class="featured-tag">Featured Game</span>
+                <h2>Tetris Classic</h2>
+                <p>The world-famous puzzle game that has captivated players for decades. Stack and clear lines to keep the game going as long as possible!</p>
+                <div class="featured-meta">
+                    <span class="featured-year">1984</span>
+                    <span class="featured-rating">9.8/10</span>
+                    <span class="featured-category">Puzzle</span>
+                </div>
+                <div class="buttons">
+                    <button class="btn-play"><span class="material-icons">play_arrow</span> Play Now</button>
+                    <!-- 'My List' and 'More Info' buttons removed as unused features -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Categories -->
+        <section id="arcade" class="game-row">
+            <div class="section-header">
+                <h3>Arcade Classics</h3>
+                <!-- 'See All' link removed as unused feature -->
+            </div>
+            <div class="game-slider">
+                <button class="slider-arrow left" aria-label="Scroll left">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <div class="game-cards">
+                    <div class="game-card" data-game="pacman">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Pac-Man">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Pac-Man</div>
+                            <div class="game-meta">1980 • Arcade • Classic</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="spaceinvaders">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Space Invaders">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Space Invaders</div>
+                            <div class="game-meta">1978 • Arcade • Shooter</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="asteroids">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Asteroids">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Asteroids</div>
+                            <div class="game-meta">1979 • Arcade • Shooter</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="breakout">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Breakout">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Breakout</div>
+                            <div class="game-meta">1976 • Arcade • Action</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="snake">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Snake">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Snake</div>
+                            <div class="game-meta">1997 • Arcade • Classic</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="tetris">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Tetris">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Tetris</div>
+                            <div class="game-meta">1984 • Puzzle • Classic</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-arrow right" aria-label="Scroll right">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="action" class="game-row">
+            <div class="section-header">
+                <h3>Action & Adventure</h3>
+                <!-- 'See All' link removed as unused feature -->
+            </div>
+            <div class="game-slider">
+                <button class="slider-arrow left" aria-label="Scroll left">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <div class="game-cards">
+                    <div class="game-card" data-game="platformer">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Platformer">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Platformer</div>
+                            <div class="game-meta">2023 • Action • Adventure</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="shooter">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Shooter">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Shooter</div>
+                            <div class="game-meta">2023 • Action • Top-down</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="racing">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Racing">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Racing</div>
+                            <div class="game-meta">2023 • Racing • Time Trial</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="fighting">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Fighting">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Fighting</div>
+                            <div class="game-meta">2023 • Combat • VS</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-arrow right" aria-label="Scroll right">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="puzzle" class="game-row">
+            <div class="section-header">
+                <h3>Puzzle Games</h3>
+                <!-- 'See All' link removed as unused feature -->
+            </div>
+            <div class="game-slider">
+                <button class="slider-arrow left" aria-label="Scroll left">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <div class="game-cards">
+                    <div class="game-card" data-game="match3">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Match 3">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Match 3</div>
+                            <div class="game-meta">2023 • Puzzle • Matching</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="sokoban">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Sokoban">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Sokoban</div>
+                            <div class="game-meta">1982 • Puzzle • Logic</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="sudoku">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Sudoku">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Sudoku</div>
+                            <div class="game-meta">1979 • Puzzle • Numbers</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="2048">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play 2048">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">2048</div>
+                            <div class="game-meta">2014 • Puzzle • Sliding</div>
+                        </div>
+                    </div>
+                    <div class="game-card" data-game="minesweeper">
+                        <div class="game-poster">
+                            <div class="game-card-overlay">
+                                <button class="btn-play-small" aria-label="Play Minesweeper">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <div class="game-title">Minesweeper</div>
+                            <div class="game-meta">1989 • Puzzle • Logic</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-arrow right" aria-label="Scroll right">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="game-row trending-now">
+            <div class="section-header">
+                <h3>Trending Now</h3>
+                <!-- 'See All' link removed as unused feature -->
+            </div>
+            <div class="trending-grid">
+                <div class="trending-item" data-game="tetris">
+                    <div class="trending-rank">1</div>
+                    <div class="trending-poster">
+                        <div class="game-card-overlay">
+                            <button class="btn-play-small" aria-label="Play Tetris">
+                                <span class="material-icons">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trending-info">
+                        <div class="game-title">Tetris</div>
+                        <div class="trending-stats">
+                            <span class="trending-up"><span class="material-icons">arrow_upward</span> 12%</span>
+                            <span class="trending-plays">12.4k plays</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending-item" data-game="snake">
+                    <div class="trending-rank">2</div>
+                    <div class="trending-poster">
+                        <div class="game-card-overlay">
+                            <button class="btn-play-small" aria-label="Play Snake">
+                                <span class="material-icons">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trending-info">
+                        <div class="game-title">Snake</div>
+                        <div class="trending-stats">
+                            <span class="trending-up"><span class="material-icons">arrow_upward</span> 8%</span>
+                            <span class="trending-plays">10.1k plays</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending-item" data-game="2048">
+                    <div class="trending-rank">3</div>
+                    <div class="trending-poster">
+                        <div class="game-card-overlay">
+                            <button class="btn-play-small" aria-label="Play 2048">
+                                <span class="material-icons">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trending-info">
+                        <div class="game-title">2048</div>
+                        <div class="trending-stats">
+                            <span class="trending-up"><span class="material-icons">arrow_upward</span> 5%</span>
+                            <span class="trending-plays">8.7k plays</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending-item" data-game="platformer">
+                    <div class="trending-rank">4</div>
+                    <div class="trending-poster">
+                        <div class="game-card-overlay">
+                            <button class="btn-play-small" aria-label="Play Platformer">
+                                <span class="material-icons">play_arrow</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trending-info">
+                        <div class="game-title">Platformer</div>
+                        <div class="trending-stats">
+                            <span class="trending-new">NEW</span>
+                            <span class="trending-plays">7.2k plays</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>GameFlix</h4>
+                <p>Your collection of classic and modern games in one place. No downloads, no installs - play instantly in your browser.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#arcade">Arcade</a></li>
+                    <li><a href="#action">Action</a></li>
+                    <li><a href="#puzzle">Puzzle</a></li>
+                    <li><a href="#">Strategy</a></li>
+                    <li><a href="#">Sports</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- Social links and newsletter removed as unused features -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GameFlix. All games are reimagined versions of classics for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- Game Player Modal -->
+    <div class="game-modal" id="gameModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-game-title">Game Title</h2>
+                <div class="modal-controls">
+                    <button class="modal-close" aria-label="Close">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="game-container"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="game-controls">
+                    <div class="control-info">
+                        <span class="material-icons">keyboard</span>
+                        <span id="game-controls-info">Use arrow keys and space</span>
+                    </div>
+                </div>
+                <div class="game-actions">
+                    <button class="btn-reset" aria-label="Reset game">
+                        <span class="material-icons">restart_alt</span> Reset
+                    </button>
+                    <!-- Share button removed as unused feature -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="purejs-game-framework.js"></script>
+    <script src="games/tetris.js"></script>
+    <script src="games/snake.js"></script>
+    <script src="games/breakout.js"></script>
+    <script src="games/asteroids.js"></script>
+    <script src="games/space-invaders.js"></script>
+    <script src="games/pacman.js"></script>
+    <script src="games/2048.js"></script>
+    <script src="games/minesweeper.js"></script>
+    <script src="games/sokoban.js"></script>
+    <script src="games/match3.js"></script>
+    <script src="games/sudoku.js"></script>
+    <script src="games/platformer.js"></script>
+    <script src="games/shooter.js"></script>
+    <script src="games/racing.js"></script>
+    <script src="games/fighting.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
