@@ -139,6 +139,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('gameModal');
         const closeButton = modal.querySelector('.modal-close');
         
+        // Create reset button
+        const resetButton = document.createElement('button');
+        resetButton.textContent = 'Reset Game';
+        resetButton.className = 'modal-reset';
+        resetButton.style.position = 'absolute';
+        resetButton.style.top = '10px';
+        resetButton.style.right = '50px';
+        resetButton.style.zIndex = '1000';
+        resetButton.style.backgroundColor = '#e50914';
+        resetButton.style.color = 'white';
+        resetButton.style.border = 'none';
+        resetButton.style.padding = '5px 10px';
+        resetButton.style.borderRadius = '4px';
+        resetButton.style.cursor = 'pointer';
+        
+        // Add reset button to modal
+        modal.querySelector('.modal-content').appendChild(resetButton);
+        
+        // Reset game when clicking the reset button
+        resetButton.addEventListener('click', () => {
+            resetCurrentGame();
+        });
+        
         // Close modal when clicking the X
         closeButton.addEventListener('click', () => {
             closeGameModal();
@@ -197,10 +220,37 @@ document.addEventListener('DOMContentLoaded', () => {
         // Stop game (clean up)
         gameContainer.innerHTML = '';
         
-        // If there's an active game instance, stop it
+        // If there's an active game instance, stop it and clear entities
         if (window.activeGame && typeof window.activeGame.stop === 'function') {
             window.activeGame.stop();
+            
+            // Clean up all entities that might have been created
+            window.activeGame.game.entities = [];
+            
             window.activeGame = null;
+        }
+    }
+    
+    /**
+     * Reset the current game
+     */
+    function resetCurrentGame() {
+        if (!window.activeGame || !window.activeGame.game.currentScene) {
+            return;
+        }
+        
+        // Clean up all entities
+        window.activeGame.game.entities = [];
+        
+        // Call reset if available or re-enter the current scene
+        const currentScene = window.activeGame.game.currentScene;
+        
+        if (typeof currentScene.reset === 'function') {
+            currentScene.reset();
+        } else if (typeof currentScene.enter === 'function') {
+            // Force gameOver to true to ensure proper reset in the enter method
+            currentScene.gameOver = true;
+            currentScene.enter();
         }
     }
     

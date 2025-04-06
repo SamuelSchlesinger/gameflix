@@ -209,6 +209,9 @@ const PureJS = {
             // Exit current scene if exists
             if (this.game.currentScene && this.game.currentScene.exit) {
                 this.game.currentScene.exit();
+                
+                // Clear global entities when switching scenes
+                this.game.entities = [];
             }
             
             // Set new scene
@@ -627,6 +630,19 @@ PureJS.Scene = class Scene {
      * Called when scene is exited
      */
     exit() {
+        // Clear all scene-specific entities
+        this.entities = [];
+        
+        // Reset game state if present
+        if (this.reset && typeof this.reset === 'function') {
+            this.reset();
+        }
+    }
+    
+    /**
+     * Reset game state (to be implemented by games)
+     */
+    reset() {
         // To be overridden by subclasses
     }
     
